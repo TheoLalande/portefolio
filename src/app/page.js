@@ -1,7 +1,6 @@
 "use client";
 import Projects from "./utils/enums/ProjectsData";
 import LandingPage from "./components/common/Landing/LandingPage";
-import GaleryModal from "./components/Projects/GaleryModal";
 import Project from "./components/Projects/Project";
 export default function Home() {
   return (

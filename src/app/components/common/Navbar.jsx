@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="text-black flex flex-row justify-between items-center pt-2 px-10 w-full">
+    <div className="text-black flex flex-row justify-between items-center pt-6 px-10 w-full">
       <a href="/" className="flex w-1/3 text-base justify-start ">
         Stack
       </a>
