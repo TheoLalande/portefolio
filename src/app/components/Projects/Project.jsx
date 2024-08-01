@@ -3,10 +3,19 @@ import React from "react";
 import Badges from "../common/Badges";
 import techColors from "../../utils/enums/Badges";
 import { useState } from "react";
+import GaleryModal from "./GaleryModal";
 
 const Project = (props) => {
   const { Typescript, Sql, Javascript, MongoDb } = techColors;
   const [isHovered, setIsHovered] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const handleOpenDialog = () => {
+    setIsDialogOpen(true);
+  };
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+  };
   return (
     <div className="flex flex-row gap-5 justify-center items-center ">
       <div
@@ -26,7 +35,10 @@ const Project = (props) => {
             <p className="transition-opacity opacity-100 w-full flex justify-center absolute top-10 left-auto text-center duration-500 text-lg">
               {props.projectName}
             </p>
-            <button className="text-sm transition-opacity opacity-100 duration-500 absolute bottom-0 left-0 w-full h-6 bg-black bg-opacity-40 text-white text-center">
+            <button
+              onClick={handleOpenDialog}
+              className="text-sm transition-opacity opacity-100 duration-500 absolute bottom-0 left-0 w-full h-6 bg-black bg-opacity-40 text-white text-center"
+            >
               Voir le projet
             </button>
           </div>
@@ -47,6 +59,11 @@ const Project = (props) => {
         <Badges borderColor={Javascript.borderColor} text={Javascript.text} />
         <Badges borderColor={MongoDb.borderColor} text={MongoDb.text} />
       </div>
+      <GaleryModal
+        isDialogOpen={isDialogOpen}
+        handleCloseDialog={handleCloseDialog}
+        handleOpenDialog={handleCloseDialog}
+      />
     </div>
   );
 };

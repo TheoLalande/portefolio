@@ -12,7 +12,6 @@ export default function Home() {
           picturePath="/Assets/ProjectPictures/Datafirst.png"
         />
       </div>
-      <GaleryModal />
     </main>
   );
 }
