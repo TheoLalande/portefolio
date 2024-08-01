@@ -17,7 +17,7 @@ export default function Home() {
             { borderColor: "border-[#FFD700]", text: "SQL" },
             { borderColor: "border-[#F0DB4F]", text: "Javascript" },
             { borderColor: "border-[#13AA52]", text: "MongoDb" },
-            { borderColor: "border-[#13AA52]", text: "NuxtJs" },
+            { borderColor: "border-[#13AA52]", text: "Nuxt2" },
             { borderColor: "border-[#13AA52]", text: "Tailwind" },
           ]}
           pictureNames={[
@@ -47,6 +47,31 @@ export default function Home() {
             "onryo_2.png",
             "onryo_3.png",
             "onryo_4.png",
+          ]}
+        />
+        <Project
+          projectName="Compufirst"
+          thumbnail="/Assets/ProjectPictures/Compufirst/compufirst.png"
+          picturePath="/Assets/ProjectPictures/Compufirst/"
+          projectDesc="Site de vente de matériel informatique (B2B)"
+          badges={[
+            { borderColor: "border-[#007ACC]", text: "SpringBoot" },
+            { borderColor: "border-[#FFD700]", text: "MySQL" },
+            { borderColor: "border-[#F0DB4F]", text: "Nuxt3" },
+            { borderColor: "border-[#13AA52]", text: "Stripe" },
+            { borderColor: "border-[#13AA52]", text: "Strappi" },
+            { borderColor: "border-[#13AA52]", text: "TailwindCss" },
+          ]}
+          pictureNames={[
+            "compufirst_1.png",
+            "compufirst_2.png",
+            "compufirst_3.png",
+            "compufirst_4.png",
+            "compufirst_5.png",
+            "compufirst_6.png",
+            "compufirst_7.png",
+            "compufirst_8.png",
+            "compufirst_9.png",
           ]}
         />
       </div>
