@@ -35,7 +35,7 @@ const Project = (props) => {
             <p className="transition-opacity opacity-0 w-full flex justify-center absolute top-10 left-auto text-center duration-500 text-lg">
               {props.projectName}
             </p>
-            <button className="text-sm transition-opacity opacity-0 duration-500 absolute bottom-0 left-0 w-full h-6 bg-black text-white text-center">
+            <button className="text-sm transition-opacity opacity-0 duration-500 absolute bottom-0 left-0 w-full h-6 bg-black bg-opacity-40 text-white text-center">
               Voir le projet
             </button>
           </div>
