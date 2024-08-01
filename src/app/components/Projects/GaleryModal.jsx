@@ -71,7 +71,7 @@ const Modal = (props) => {
               alt="Datafirst"
             />
           </div>
-          <div className="w-full flex ml-2 h-8 italic border-t-[1px] text-xs items-center ">
+          <div className="w-full flex ml-2 h-8 italic border-t-[1px] text-[10px] items-center ">
             {props.projectDesc}
           </div>
         </div>

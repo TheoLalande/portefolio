@@ -27,7 +27,7 @@ const Project = (props) => {
           src={props.thumbnail}
           alt={props.thumbnail}
           fill
-          className="object-contain hover:blur-sm duration-500"
+          className="object-cover hover:blur-sm duration-500"
           priority
         />
         {isHovered ? (
@@ -54,11 +54,15 @@ const Project = (props) => {
         )}
       </div>
       <div className="flex flex-col gap-2">
-        <Badges borderColor={Typescript.borderColor} text={Typescript.text} />
-        <Badges borderColor={Sql.borderColor} text={Sql.text} />
-        <Badges borderColor={Javascript.borderColor} text={Javascript.text} />
-        <Badges borderColor={MongoDb.borderColor} text={MongoDb.text} />
-        <Badges borderColor={MongoDb.borderColor} text={"NuxtJs"} />
+        {props.badges.map((badge, index) => {
+          return (
+            <Badges
+              key={index}
+              borderColor={badge.borderColor}
+              text={badge.text}
+            />
+          );
+        })}
       </div>
       <GaleryModal
         isDialogOpen={isDialogOpen}
