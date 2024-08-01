@@ -50,7 +50,7 @@ const Modal = (props) => {
             </div>
           </div>
           <div className="relative">
-            <button className="absolute top-20 left-0 p-2">
+            <button className="ml-2 absolute top-20 left-0 border-[1px] border-solid border-black  rounded-full  shadow-lg bg-white bg-opacity-50 ">
               {" "}
               <GrFormPrevious
                 onClick={() => {
@@ -58,7 +58,7 @@ const Modal = (props) => {
                 }}
               />
             </button>
-            <button className="absolute top-20 right-0 p-2">
+            <button className="mr-2 absolute top-20 right-0  border-[1px] border-solid border-black  rounded-full  shadow-lg bg-white bg-opacity-50">
               <GrFormNext
                 onClick={() => {
                   handleClick("next");
