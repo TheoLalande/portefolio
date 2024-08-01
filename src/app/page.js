@@ -11,6 +11,7 @@ export default function Home() {
           projectName="Datafirst"
           thumbnail="/Assets/ProjectPictures/Datafirst/Datafirst.png"
           picturePath="/Assets/ProjectPictures/Datafirst/"
+          projectDesc="Plateforme interne de KPIs"
           pictureNames={[
             "data_1.png",
             "data_2.png",

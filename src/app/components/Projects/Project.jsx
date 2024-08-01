@@ -61,10 +61,12 @@ const Project = (props) => {
       </div>
       <GaleryModal
         isDialogOpen={isDialogOpen}
+        projectName={props.projectName}
         handleCloseDialog={handleCloseDialog}
         handleOpenDialog={handleCloseDialog}
         pictureNames={props.pictureNames}
         picturePath={props.picturePath}
+        projectDesc={props.projectDesc}
       />
     </div>
   );

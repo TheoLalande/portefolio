@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import { useState } from "react";
 import CloseBtn from "../common/svg/CloseBtn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
@@ -37,13 +36,18 @@ const Modal = (props) => {
               : "opacity-0 -translate-y-28 scale-90"
           }`}
         >
-          <div className="flex w-full h-8 border-b-[1px] justify-end ">
-            <button
-              onClick={props.handleCloseDialog}
-              className="w-8 h-8 flex justify-center items-center "
-            >
-              <CloseBtn />
-            </button>
+          <div className="flex w-full h-8 border-b-[1px]  ">
+            <div className="w-full flex justify-start ml-2 italic text-xs items-center ">
+              {props.projectName}
+            </div>
+            <div className="w-full flex justify-end">
+              <button
+                onClick={props.handleCloseDialog}
+                className="w-8 h-8 flex justify-center items-center "
+              >
+                <CloseBtn />
+              </button>
+            </div>
           </div>
           <div className="relative">
             <button className="absolute top-20 left-0 p-2">
@@ -67,7 +71,9 @@ const Modal = (props) => {
               alt="Datafirst"
             />
           </div>
-          <div className="w-full h-8 border-t-[1px] "></div>
+          <div className="w-full flex ml-2 h-8 italic border-t-[1px] text-xs items-center ">
+            {props.projectDesc}
+          </div>
         </div>
       </div>
     </div>
