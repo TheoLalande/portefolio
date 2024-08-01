@@ -10,6 +10,7 @@ export default function Home() {
         <Project
           projectName="Datafirst"
           thumbnail="/Assets/ProjectPictures/Datafirst/Datafirst.png"
+          titleColor={"text-[#000000]"}
           picturePath="/Assets/ProjectPictures/Datafirst/"
           projectDesc="Plateforme interne de KPIs"
           badges={[
@@ -31,6 +32,7 @@ export default function Home() {
         />
         <Project
           projectName="Onryo"
+          titleColor={"text-[#000000]"}
           thumbnail="/Assets/ProjectPictures/Onryo/onryo.png"
           picturePath="/Assets/ProjectPictures/Onryo/"
           projectDesc="Site E-commerce de vente de t-shirts"
@@ -51,6 +53,7 @@ export default function Home() {
         />
         <Project
           projectName="Compufirst"
+          titleColor={"text-[#FFFFFF]"}
           thumbnail="/Assets/ProjectPictures/Compufirst/compufirst.png"
           picturePath="/Assets/ProjectPictures/Compufirst/"
           projectDesc="Site de vente de matériel informatique (B2B)"

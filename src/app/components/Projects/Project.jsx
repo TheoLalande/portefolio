@@ -32,7 +32,9 @@ const Project = (props) => {
         />
         {isHovered ? (
           <div>
-            <p className="transition-opacity opacity-100 w-full flex justify-center absolute top-10 left-auto text-center duration-500 text-lg">
+            <p
+              className={`transition-opacity opacity-100 w-full flex justify-center absolute top-10 left-auto text-center duration-500 text-lg ${props.titleColor}`}
+            >
               {props.projectName}
             </p>
             <button
