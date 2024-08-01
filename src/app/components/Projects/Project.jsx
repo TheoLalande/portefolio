@@ -24,8 +24,8 @@ const Project = (props) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <Image
-          src={props.picturePath}
-          alt={props.picturePath}
+          src={props.thumbnail}
+          alt={props.thumbnail}
           fill
           className="object-contain hover:blur-sm duration-500"
           priority
@@ -63,6 +63,8 @@ const Project = (props) => {
         isDialogOpen={isDialogOpen}
         handleCloseDialog={handleCloseDialog}
         handleOpenDialog={handleCloseDialog}
+        pictureNames={props.pictureNames}
+        picturePath={props.picturePath}
       />
     </div>
   );

@@ -12,12 +12,12 @@ const LandingPage = () => {
     }, 2000);
     setTimeout(() => {
       setIsDivShown(false);
-    }, 5000);
+    }, 4000);
   }, []);
   if (isDivShown) {
     return (
       <div
-        className={`landing-container z-50 absolute top-0 left-0 transition-opacity duration-[3000ms] ${
+        className={`landing-container z-50 absolute top-0 left-0 transition-opacity duration-[2000ms] ${
           isLanding ? "opacity-100" : "opacity-0"
         }`}
       >

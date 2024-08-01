@@ -1,6 +1,26 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import { useState } from "react";
+import CloseBtn from "../common/svg/CloseBtn";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
-const GaleryModal = (props) => {
+const Modal = (props) => {
+  let [pictureNumber, setPictureNumber] = useState(1);
+  const handleClick = (param) => {
+    if (param === "next") {
+      if (pictureNumber < props.pictureNames.length - 1) {
+        setPictureNumber(pictureNumber + 1);
+      } else {
+        setPictureNumber(0);
+      }
+    } else {
+      if (pictureNumber > 0) {
+        setPictureNumber(pictureNumber - 1);
+      } else {
+        setPictureNumber(props.pictureNames.length - 1);
+      }
+    }
+  };
   return (
     <div>
       <div
@@ -11,40 +31,47 @@ const GaleryModal = (props) => {
         }`}
       >
         <div
-          className={`relative w-[90%] h-[80%] rounded-lg bg-gray-200   shadow-2xl transition-all duration-300 ${
+          className={`relative w-[90%] max-w-4xl rounded-lg bg-white shadow-2xl transition-all duration-300 ${
             props.isDialogOpen
               ? "opacity-100 translate-y-0 scale-100"
               : "opacity-0 -translate-y-28 scale-90"
           }`}
         >
-          <div className=" ">
+          <div className="flex w-full h-8 border-b-[1px] justify-end ">
             <button
               onClick={props.handleCloseDialog}
-              className="text-lg font-bold absolute top-3 right-3"
+              className="w-8 h-8 flex justify-center items-center "
             >
-              x
+              <CloseBtn />
             </button>
-            {/* <Image
-              src="/Assets/ProjectPictures/Datafirst/1.png"
-              alt="Datafirst"
-              fill
-              className="object-contain"
-            /> */}
           </div>
+          <div className="relative">
+            <button className="absolute top-20 left-0 p-2">
+              {" "}
+              <GrFormPrevious
+                onClick={() => {
+                  handleClick("prev");
+                }}
+              />
+            </button>
+            <button className="absolute top-20 right-0 p-2">
+              <GrFormNext
+                onClick={() => {
+                  handleClick("next");
+                }}
+              />
+            </button>
+            <img
+              className="w-auto h-auto max-w-full max-h-[calc(100vh-80px)]"
+              src={props.picturePath + props.pictureNames[pictureNumber]}
+              alt="Datafirst"
+            />
+          </div>
+          <div className="w-full h-8 border-t-[1px] "></div>
         </div>
       </div>
     </div>
   );
 };
 
-export default GaleryModal;
-
-{
-  /* <Image
-src={props.picturePath}
-alt={props.picturePath}
-fill
-className="object-contain hover:blur-sm duration-500"
-priority
-/> */
-}
+export default Modal;

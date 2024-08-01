@@ -9,7 +9,16 @@ export default function Home() {
       <div className="flex flex-col m-10 z-0 gap-8 ">
         <Project
           projectName="Datafirst"
-          picturePath="/Assets/ProjectPictures/Datafirst.png"
+          thumbnail="/Assets/ProjectPictures/Datafirst/Datafirst.png"
+          picturePath="/Assets/ProjectPictures/Datafirst/"
+          pictureNames={[
+            "data_1.png",
+            "data_2.png",
+            "data_3.png",
+            "data_4.png",
+            "data_5.png",
+            "data_6.png",
+          ]}
         />
       </div>
     </main>
