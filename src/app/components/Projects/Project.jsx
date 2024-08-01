@@ -19,7 +19,7 @@ const Project = (props) => {
   return (
     <div className="flex flex-row gap-5 justify-center items-center ">
       <div
-        className="relative w-48 h-48 border-black border-[1px] border-solid rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_10px_1px_rgba(50,_50,_50,_0.1),_0_10px_20px_rgba(34,_34,_34,_0.5)] overflow-hidden duration-500"
+        className="relative w-48 sm:w-72 md:w-96 md:h-72 h-48 border-black border-[1px] border-solid rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_10px_1px_rgba(50,_50,_50,_0.1),_0_10px_20px_rgba(34,_34,_34,_0.5)] overflow-hidden duration-500"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
