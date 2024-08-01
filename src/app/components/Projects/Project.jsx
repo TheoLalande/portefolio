@@ -58,6 +58,7 @@ const Project = (props) => {
         <Badges borderColor={Sql.borderColor} text={Sql.text} />
         <Badges borderColor={Javascript.borderColor} text={Javascript.text} />
         <Badges borderColor={MongoDb.borderColor} text={MongoDb.text} />
+        <Badges borderColor={MongoDb.borderColor} text={"NuxtJs"} />
       </div>
       <GaleryModal
         isDialogOpen={isDialogOpen}
