@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="container">
-        <div className="h-screen w-screen bg-white">
+        <div className="dark h-screen w-screen bg-white">
           <Navbar />
           {children}
         </div>

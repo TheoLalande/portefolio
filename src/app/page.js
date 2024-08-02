@@ -5,7 +5,7 @@ import Project from "./components/Projects/Project";
 import Button from "./components/common/ButtonForm";
 export default function Home() {
   return (
-    <main className="pb-8">
+    <main className="pb-12">
       <LandingPage />
       <div className="flex flex-col m-10 z-0 gap-8 ">
         {Projects.map((project, index) => {
