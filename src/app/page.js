@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="pb-12">
       <LandingPage />
-      <div className="flex flex-col m-10 z-0 gap-8 ">
+      <div className="flex flex-col mb-10 mt-5 z-0 gap-8 ">
         {Projects.map((project, index) => {
           return (
             <Project
