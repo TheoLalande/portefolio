@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../../utils/send-email";
 
@@ -7,16 +7,26 @@ const Button = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const { register, handleSubmit, reset } = useForm();
+  let [isEmailSent, setIsEmailSent] = useState(false);
 
   const handleClick = () => {
     setIsClicked(true);
   };
 
-  const onSubmit = (data) => {
-    console.log(data);
-    sendEmail(data);
-    reset();
-    closeForm();
+  // TODO : ICI ON VEUT CONTINUER A STYLISER LE BOUTON DU FORMULAIRE
+  // TODO : ON VEUT AVOIR UN EFFET DE PUSLSATION SI LE MAIL EST BIEN ENVOYE
+  const onSubmit = async (data) => {
+    const res = await sendEmail(data);
+    if (res === true) {
+      setIsEmailSent(true);
+      console.log("🚀🚀 ~ isEmailSent:", isEmailSent);
+
+      setTimeout(() => {
+        reset();
+        closeForm();
+        setIsEmailSent(false);
+      }, "3000");
+    }
   };
 
   const closeForm = () => {
@@ -52,20 +62,6 @@ const Button = () => {
           </button>
           <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
             <h1 className="text-lg mb-4">Contactez-moi</h1>
-            <label
-              htmlFor="surname"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Prénom
-            </label>
-            <input
-              type="text"
-              name="surname"
-              required
-              className="w-full p-2 mb-3   border-b-[1px] focus:border-gray-700  rounded-none outline-none "
-              {...register("surname", { required: true })}
-            />
-
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-700"
@@ -109,7 +105,9 @@ const Button = () => {
 
             <button
               type="submit"
-              className="bg-black text-white border-[1px] border-black rounded-full p-2 w-full"
+              className={`${
+                isEmailSent ? "bg-green-400" : "bg-black"
+              } text-white border-[1px]  rounded-full p-2 w-full`}
             >
               Envoyer
             </button>

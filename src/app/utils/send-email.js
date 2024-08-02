@@ -14,5 +14,7 @@ export function sendEmail(data) {
     })
     .catch((err) => {
       alert(err.message);
+      return false;
     });
+  return true;
 }
