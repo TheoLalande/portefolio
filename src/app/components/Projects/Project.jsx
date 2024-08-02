@@ -22,7 +22,7 @@ const Project = (props) => {
         {/* LES BADGES */}
         <div
           className={`flex flex-col gap-2 absolute top-0 ${
-            isHovered ? "-right-20" : "right-0"
+            isHovered ? "-right-[80px]" : "right-0"
           } transition-right  z-0`}
         >
           {props.badges.map((badge, index) => {
@@ -90,5 +90,3 @@ const Project = (props) => {
 };
 
 export default Project;
-
-// shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]
