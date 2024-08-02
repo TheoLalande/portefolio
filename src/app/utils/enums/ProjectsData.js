@@ -50,7 +50,7 @@ const Projects = [
       { borderColor: "border-[#F0DB4F]", text: "Nuxt3" },
       { borderColor: "border-[#13AA52]", text: "Stripe" },
       { borderColor: "border-[#13AA52]", text: "Strappi" },
-      { borderColor: "border-[#13AA52]", text: "TailwindCss" },
+      { borderColor: "border-[#13AA52]", text: "Tailwind" },
     ],
     pictureNames: [
       "compufirst_1.png",

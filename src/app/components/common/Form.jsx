@@ -51,7 +51,34 @@ const Button = () => {
             X
           </button>
           <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
-            <h1 className="text-lg mb-2">Contactez-nous</h1>
+            <h1 className="text-lg mb-4">Contactez-moi</h1>
+            <label
+              htmlFor="surname"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Prénom
+            </label>
+            <input
+              type="text"
+              name="surname"
+              required
+              className="w-full p-2 mb-3   border-b-[1px] focus:border-gray-700  rounded-none outline-none "
+              {...register("surname", { required: true })}
+            />
+
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Nom
+            </label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full p-2 mb-3   border-b-[1px] focus:border-gray-700  rounded-none outline-none "
+              {...register("name", { required: true })}
+            />
 
             <label
               htmlFor="email"
@@ -61,10 +88,9 @@ const Button = () => {
             </label>
             <input
               type="text"
-              placeholder="Entrez votre Email"
               name="email"
               required
-              className="w-full p-2 mb-3 border rounded bg-gray-100 focus:bg-gray-200 outline-none"
+              className="w-full p-2 mb-3   border-b-[1px] focus:border-gray-700  rounded-none outline-none "
               {...register("email", { required: true })}
             />
 
@@ -75,10 +101,9 @@ const Button = () => {
               Message
             </label>
             <textarea
-              placeholder="Votre message"
               name="message"
               required
-              className="w-full p-2 mb-3 border rounded bg-gray-100 focus:bg-gray-200 outline-none"
+              className="w-full p-2 mb-3 border-b-[1px]  focus:border-gray-700 outline-none"
               {...register("message", { required: true })}
             />
 

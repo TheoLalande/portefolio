@@ -37,7 +37,7 @@ const Project = (props) => {
 
         {/* LES PROJETS */}
         <div
-          className="relative w-48 sm:w-72 md:w-96 md:h-72 h-48 border-black border-[1px] border-solid rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden duration-500 z-10"
+          className="relative w-48 sm:w-72 md:w-96 md:h-72 h-48 border-black border-[1px] border-solid rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden duration-500 z-10"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -45,7 +45,9 @@ const Project = (props) => {
             src={props.thumbnail}
             alt={props.thumbnail}
             fill
-            className="object-cover hover:blur-sm duration-500"
+            className={`object-cover hover:blur-sm duration-500 ${
+              isHovered ? "filter blur-sm" : ""
+            }`}
             priority
           />
           {isHovered ? (

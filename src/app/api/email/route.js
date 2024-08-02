@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
-    const { email, message } = await request.json();
+    const { email, message, name, surname } = await request.json();
     console.log("Received email:", email);
     console.log("Received message:", message);
 
@@ -19,7 +19,7 @@ export async function POST(request) {
       from: process.env.GMAIL_EMAIL,
       to: process.env.GMAIL_EMAIL,
       cc: email,
-      subject: `Message from (${email})`,
+      subject: `Nouveau message de ${name} ${surname}`,
       text: message,
     };
 

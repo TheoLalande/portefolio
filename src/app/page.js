@@ -2,7 +2,7 @@
 import Projects from "./utils/enums/ProjectsData";
 import LandingPage from "./components/common/Landing/LandingPage";
 import Project from "./components/Projects/Project";
-import Button from "./components/common/ButtonForm";
+import Button from "./components/common/Form";
 export default function Home() {
   return (
     <main className="pb-12">
