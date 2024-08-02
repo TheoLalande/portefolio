@@ -6,7 +6,6 @@ import { useState } from "react";
 import GaleryModal from "./GaleryModal";
 
 const Project = (props) => {
-  const { Typescript, Sql, Javascript, MongoDb } = techColors;
   const [isHovered, setIsHovered] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -17,7 +16,7 @@ const Project = (props) => {
     setIsDialogOpen(false);
   };
   return (
-    <div className="flex flex-row gap-5 justify-center items-center ">
+    <div className="flex flex-row  justify-center items-center ">
       <div className="relative">
         {/* LES BADGES */}
         <div

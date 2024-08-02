@@ -29,9 +29,9 @@ const Button = () => {
 
   return (
     <div>
-      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 z-50">
+      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 z-20 ">
         <button
-          className="bg-black text-white border-[1px] border-black rounded-full p-2 w-24"
+          className="bg-black text-white border-[1px] border-black rounded-full p-2 w-24 "
           onClick={handleClick}
         >
           Contact
@@ -40,7 +40,7 @@ const Button = () => {
 
       {isClicked && (
         <div
-          className={`fixed bottom-0 right-4 z-50 w-80 p-4 bg-white border-2 border-gray-300 rounded-md shadow-lg ${
+          className={`fixed bottom-4 right-7 z-50 w-80 p-4 bg-white border-2 border-gray-300 rounded-2xl shadow-lg ${
             isClosing ? "animate-slide-down" : "animate-slide-up"
           }`}
         >
